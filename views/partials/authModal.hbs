@@ -1,0 +1,24 @@
+<div id="auth-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h2 id="modal-title">Вход</h2>
+    <form id="auth-form">
+      <div id="name-group" class="form-group none">
+        <label for="name-input">Имя</label>
+        <input type="text" id="name-input" name="name-input" placeholder="Введите имя" />
+      </div>
+      <div class="form-group">
+        <label for="email-input">Email</label>
+        <input type="email" id="email-input" name="email" placeholder="Введите email" required />
+      </div>
+      <div id="password-group" class="form-group">
+        <label for="password-input">Пароль</label>
+        <input type="password" id="password-input" name="password" placeholder="Введите пароль" required />
+      </div>
+      <button type="submit" id="submit-button">Войти</button>
+    </form>
+    <div class="switch-auth">
+      <p id="switch-text"></p>
+    </div>
+  </div>
+</div>

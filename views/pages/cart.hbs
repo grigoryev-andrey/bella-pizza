@@ -1,0 +1,60 @@
+<script src="/js/cart.js"></script>
+
+<div class="cart-page">
+  <div class="cart-container">
+    <h1 class="cart-page-name">Корзина</h1>
+
+    {{#if cart.items.length}}
+      <div class="cart-items">
+        {{#each cart.items}}
+          <div class="cart-item" data-item-id="{{this.id}}" data-dish-id="{{this.dish.id}}">
+            <div class="item-image">
+              {{#if this.dish.imageUrl}}
+                <img src="{{this.dish.imageUrl}}" alt="{{this.dish.name}}">
+              {{/if}}
+            </div>
+
+            <div class="item-details">
+              <h3 class="item-name">{{this.dish.name}}</h3>
+<!--              <p class="item-description">{{this.dish.description}}</p>-->
+              <p class="item-price">${{this.dish.price}}</p>
+            </div>
+
+            <div class="item-controls">
+              <div class="quantity-controls">
+                <button class="quantity-btn minus-btn" data-action="decrease">-</button>
+                <span class="quantity">{{this.quantity}}</span>
+                <button class="quantity-btn plus-btn" data-action="increase">+</button>
+              </div>
+
+              <button class="remove-btn" data-action="remove" title="Удалить из корзины">
+                🗑️
+              </button>
+            </div>
+
+            <div class="item-total">
+              <span class="total-price">${{multiply this.dish.price this.quantity}}</span>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="cart-summary">
+        <div class="total-section">
+          <h3>Итого: <span id="cart-total">${{calculateTotal cart.items}}</span></h3>
+        </div>
+
+        <div class="actions-section">
+          <button id="clear-cart" class="btn btn-secondary">Очистить корзину</button>
+          <button id="checkout-btn" class="btn btn-primary">Оформить заказ</button>
+        </div>
+      </div>
+    {{else}}
+      <div class="empty-cart">
+        <h2>Корзина пуста</h2>
+        <p>Добавьте товары из меню</p>
+        <a href="/menu" class="btn btn-primary">Перейти в меню</a>
+      </div>
+    {{/if}}
+  </div>
+</div>

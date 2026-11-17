@@ -1,0 +1,33 @@
+<script src="/js/homepage.js"></script>
+
+<section class="hero-section">
+  <div class="hero-image">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">Свежие ингредиенты, аутентичный вкус, итальянская кухня</h1>
+        <p class="hero-subtitle">Ощутите вкус Италии с каждым кусочком</p>
+        <button class="cta-button">Открыть меню</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="featured-dishes">
+  <h2 class="featured-dishes-title">Попробуйте новинки!</h2>
+  <div class="dishes-grid">
+    {{#each dishes}}
+      {{> dishCard}}
+    {{/each}}
+  </div>
+</section>
+<section class="testimonials-section">
+  <div class="testimonials-content">
+    <h2 class="testimonials-title">Отзывы</h2>
+    <div class="testimonials-grid">
+      <div class="testimonials-row">
+        {{#each testimonials}}
+          {{> testimonialCard this}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

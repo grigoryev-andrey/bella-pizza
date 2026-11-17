@@ -1,0 +1,27 @@
+<script src="/js/cruds/cart.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Создать корзину</h2>
+
+  <form id="cart-create" class="crud-form">
+    <div class="crud-field">
+      <label for="userId" class="crud-label">ID пользователя</label>
+      <input type="text" id="userId" name="userId" class="crud-input" required>
+    </div>
+
+    <div class="crud-field">
+      <label for="items" class="crud-label">Товары (JSON)</label>
+      <textarea id="items" name="items" class="crud-input" rows="5" placeholder='[{"dishId":"...","quantity":2}]' required></textarea>
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="createCartBtn" class="crud-button">Создать</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>

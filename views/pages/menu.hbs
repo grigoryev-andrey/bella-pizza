@@ -1,0 +1,41 @@
+<script src="/js/categories.js"></script>
+
+<section class="featured-dishes">
+  <h2 class="featured-dishes-title">Меню</h2>
+  <div class="container">
+    <div class="dishes-grid">
+      {{#each dishes}}
+        {{> dishCard}}
+      {{/each}}
+    </div>
+    <ul class="category-list">
+      <li class="category-item">
+        <button class="category-button active all-category-button" data-category="">
+          Все блюда
+        </button>
+      </li>
+      {{#each categories}}
+        {{> category}}
+      {{/each}}
+    </ul>
+  </div>
+
+  {{#if pagination.totalPages}}
+    <div class="pagination">
+      {{#if pagination.hasPrev}}
+        <a href="{{pagination.baseUrl}}?page=1&limit={{pagination.limit}}" class="pagination-btn first-btn" title="Первая страница">≪</a>
+        <a href="{{pagination.baseUrl}}?page={{pagination.prevPage}}&limit={{pagination.limit}}" class="pagination-btn prev-btn" title="Предыдущая">←</a>
+      {{/if}}
+
+      <span class="pagination-info">
+      Страница {{pagination.page}} из {{pagination.totalPages}}
+    </span>
+
+      {{#if pagination.hasNext}}
+        <a href="{{pagination.baseUrl}}?page={{pagination.nextPage}}&limit={{pagination.limit}}" class="pagination-btn next-btn" title="Следующая">→</a>
+        <a href="{{pagination.baseUrl}}?page={{pagination.totalPages}}&limit={{pagination.limit}}" class="pagination-btn last-btn" title="Последняя страница">≫</a>
+      {{/if}}
+    </div>
+  {{/if}}
+
+</section>

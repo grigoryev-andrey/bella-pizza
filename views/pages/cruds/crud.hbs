@@ -1,0 +1,10 @@
+<script src="/js/crud.js"></script>
+
+<div class="crud-container">
+  <h1 class="crud-title">CRUD-панель</h1>
+  <div class="crud-buttons">
+    {{#each entities}}
+      <button class="crud-button entity-button" data-entity="{{this.entity}}">{{this.name}}</button>
+    {{/each}}
+  </div>
+</div>

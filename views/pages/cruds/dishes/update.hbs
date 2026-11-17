@@ -1,0 +1,47 @@
+<script src="/js/cruds/dish.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Обновить блюдо</h2>
+
+  <form id="dish-update" class="crud-form">
+    <div class="crud-field">
+      <label for="updateId" class="crud-label">ID блюда</label>
+      <input type="text" id="updateId" name="updateId" class="crud-input" required>
+    </div>
+
+    <div class="crud-field">
+      <label for="name" class="crud-label">Название</label>
+      <input type="text" id="name" name="name" class="crud-input">
+    </div>
+
+    <div class="crud-field">
+      <label for="description" class="crud-label">Описание</label>
+      <textarea id="description" name="description" class="crud-input" rows="3"></textarea>
+    </div>
+
+    <div class="crud-field">
+      <label for="price" class="crud-label">Цена</label>
+      <input type="number" id="price" name="price" class="crud-input" step="0.01">
+    </div>
+
+    <div class="crud-field">
+      <label for="imageUrl" class="crud-label">Ссылка на изображение</label>
+      <input type="url" id="imageUrl" name="imageUrl" class="crud-input">
+    </div>
+
+    <div class="crud-field">
+      <label for="categoryId" class="crud-label">ID категории</label>
+      <input type="text" id="categoryId" name="categoryId" class="crud-input">
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="updateDishBtn" class="crud-button">Обновить</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>

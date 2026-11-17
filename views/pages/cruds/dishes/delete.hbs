@@ -1,0 +1,22 @@
+<script src="/js/cruds/dish.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Удалить блюдо</h2>
+
+  <form id="dish-delete" class="crud-form">
+    <div class="crud-field">
+      <label for="deleteId" class="crud-label">ID блюда</label>
+      <input type="text" id="deleteId" name="deleteId" class="crud-input" required>
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="deleteDishBtn" class="crud-button">Удалить</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>

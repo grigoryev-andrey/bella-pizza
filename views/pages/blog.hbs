@@ -1,0 +1,46 @@
+<section class="blog-posts">
+  <h2 class="blog-posts-title">Блог</h2>
+  <div class="blog-grid">
+    {{#if posts.length}}
+        {{#each posts}}
+          {{> blogPost}}
+        {{/each}}
+    {{else}}
+      <div class="no-posts">
+        <p>Пока нет записей в блоге, но скоро появится что-то вкусное!</p>
+      </div>
+    {{/if}}
+  </div>
+
+  {{#if pagination.totalPages}}
+    <div class="pagination">
+      {{#if pagination.hasPrev}}
+        <a href="/blog?page=1&limit={{pagination.limit}}" class="pagination-btn first-btn" title="Первая страница">
+        ≪
+        </a>
+      {{/if}}
+
+      {{#if pagination.hasPrev}}
+        <a href="/blog?page={{pagination.prevPage}}&limit={{pagination.limit}}" class="pagination-btn prev-btn" title="Предыдущая страница">
+        ←
+        </a>
+      {{/if}}
+
+      <span class="pagination-info">
+        Страница {{pagination.page}} из {{pagination.totalPages}}
+      </span>
+
+      {{#if pagination.hasNext}}
+        <a href="/blog?page={{pagination.nextPage}}&limit={{pagination.limit}}" class="pagination-btn next-btn" title="Следующая страница">
+        →
+        </a>
+      {{/if}}
+
+      {{#if pagination.hasNext}}
+        <a href="/blog?page={{pagination.totalPages}}&limit={{pagination.limit}}" class="pagination-btn last-btn" title="Последняя страница">
+        ≫
+        </a>
+      {{/if}}
+    </div>
+  {{/if}}
+</section>

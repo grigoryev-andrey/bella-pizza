@@ -1,0 +1,26 @@
+<script src="/js/cruds/category.js"></script>
+
+<div class="crud-container">
+  <div class="crud-static-warning">
+    Нельзя удалить категорию, если есть соответствующие блюда
+  </div>
+
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Удалить категорию</h2>
+
+  <form id="category-delete" class="crud-form">
+    <div class="crud-field">
+      <label for="deleteId" class="crud-label">ID категории</label>
+      <input type="text" id="deleteId" name="deleteId" class="crud-input" required>
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="deleteCategoryBtn" class="crud-button">Удалить</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>

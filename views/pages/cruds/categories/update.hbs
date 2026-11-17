@@ -1,0 +1,28 @@
+<script src="/js/cruds/category.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Обновить категорию</h2>
+
+  <form id="category-update" class="crud-form">
+    <div class="crud-field">
+      <label for="updateId" class="crud-label">ID категории</label>
+      <input type="text" id="updateId" name="updateId" class="crud-input" required>
+    </div>
+
+    <div class="crud-field">
+      <label for="name" class="crud-label">Новое название</label>
+      <input type="text" id="name" name="name" class="crud-input">
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="updateCategoryBtn" class="crud-button">Обновить</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>
+

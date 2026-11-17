@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="пицца, пиццерия">
+  <meta name="description" content="Лучшая пиццерия в городе">
+  <title>Bella Pizza</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js@v0.16.0/bundle/website.c7860dc40a39421c659b.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js@v0.16.0/bundle/supertokens.a91fb11593adf048be46.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js@v0.16.0/bundle/session.1e8cb79cef1389b3f612.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-web-js@v0.16.0/bundle/emailpassword.9ad12a0b9dfd0097aad2.js"></script>
+  <script src="/js/main.js"></script>
+  <script type="module" src="/js/auth.js"></script>
+</head>
+<body>
+{{> header}}
+<main>
+  {{{body}}}
+  {{> authModal}}
+</main>
+{{> footer}}
+</body>
+</html>

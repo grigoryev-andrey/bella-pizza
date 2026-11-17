@@ -1,0 +1,26 @@
+<script src="/js/cruds/cart.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <div id="static-warning" class="crud-warning static">
+    Внимание: удаление корзины - крайняя мера!
+  </div>
+
+  <h2 class="crud-title">Удалить корзину</h2>
+
+  <form id="cart-delete" class="crud-form">
+    <div class="crud-field">
+      <label for="deleteId" class="crud-label">ID корзины</label>
+      <input type="text" id="deleteId" name="deleteId" class="crud-input" required>
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="deleteCartBtn" class="crud-button">Удалить</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>

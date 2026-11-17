@@ -1,0 +1,32 @@
+<script src="/js/cruds/order.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Обновить заказ</h2>
+
+  <form id="order-update" class="crud-form">
+    <div class="crud-field">
+      <label for="updateId" class="crud-label">ID заказа</label>
+      <input type="text" id="updateId" name="updateId" class="crud-input" required>
+    </div>
+
+    <div class="crud-field">
+      <label for="status" class="crud-label">Статус (pending, confirmed, delivered)</label>
+      <input type="text" id="status" name="status" class="crud-input">
+    </div>
+
+    <div class="crud-field">
+      <label for="items" class="crud-label">Items (JSON, опционально)</label>
+      <textarea id="items" name="items" class="crud-input" rows="5" placeholder='[{"dishId":"...","quantity":2}]'></textarea>
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="updateOrderBtn" class="crud-button">Обновить</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>

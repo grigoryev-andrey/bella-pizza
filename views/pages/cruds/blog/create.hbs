@@ -1,0 +1,37 @@
+<script src="/js/cruds/blog.js"></script>
+
+<div class="crud-container">
+  <div id="crud-warning" class="crud-warning"></div>
+
+  <h2 class="crud-title">Создать пост</h2>
+
+  <form id="blog-create" class="crud-form">
+    <div class="crud-field">
+      <label for="title" class="crud-label">Заголовок</label>
+      <input type="text" id="title" name="title" class="crud-input" required>
+    </div>
+
+    <div class="crud-field">
+      <label for="content" class="crud-label">Контент</label>
+      <textarea id="content" name="content" class="crud-input" rows="5" required></textarea>
+    </div>
+
+    <div class="crud-field">
+      <label for="author" class="crud-label">Автор</label>
+      <input type="text" id="author" name="author" class="crud-input" required>
+    </div>
+
+    <div class="crud-field">
+      <label for="userId" class="crud-label">ID пользователя</label>
+      <input type="text" id="userId" name="userId" class="crud-input" required>
+    </div>
+
+    <div class="crud-buttons">
+      <button type="button" id="createBtn" class="crud-button">Создать</button>
+    </div>
+  </form>
+
+  <div id="after-action" class="after-action" style="display:none;">
+    <button id="viewBtn" class="crud-button">Посмотреть изменения</button>
+  </div>
+</div>
